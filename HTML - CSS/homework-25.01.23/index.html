@@ -5,9 +5,483 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style></style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../normalize.css" />
+    <style>
+      body {
+        padding-top: 3.375rem;
+        color: #6c757d;
+      }
+      p {
+        margin-bottom: 40px;
+        font-size: 1.35rem;
+        font-weight: 400;
+      }
+      nav {
+        background-color: #bd5d38;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 19rem;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      nav img {
+        max-width: 10rem;
+        max-height: 10rem;
+        border: 0.5rem solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+      }
+
+      nav a {
+        font-size: large;
+        font-weight: 800;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: gainsboro;
+      }
+      nav a:hover {
+        color: #fff;
+      }
+      nav li {
+        padding: 0.5rem 1rem;
+      }
+
+      hr {
+        margin-top: 60px;
+      }
+
+      .resume-section {
+        margin-left: 300px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 15rem;
+        min-height: 90vh;
+        display: flex;
+        max-width: 90rem;
+        flex-direction: column;
+        text-align: flex-start;
+      }
+      .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 3.5rem;
+        width: 3.5rem;
+        background-color: #495057;
+        color: #fff;
+        border-radius: 100%;
+        font-size: 1.5rem;
+        margin-right: 1.5rem;
+        text-decoration: none;
+      }
+
+      .social-icon:hover {
+        background-color: #bd5d38;
+      }
+
+      /*ABOUT*/
+      #about {
+        justify-content: center;
+      }
+      #about h1 {
+        margin-bottom: 0px;
+        text-transform: uppercase;
+        line-height: 1;
+        font-size: 5rem;
+        font-weight: 700;
+      }
+
+      #about p {
+        margin-bottom: 40px;
+        font-size: 1.35rem;
+        font-weight: 400;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        margin-bottom: 3rem !important;
+      }
+
+      /*education*/
+      #education {
+        justify-content: center;
+      }
+      /*skills*/
+      #skills {
+        justify-content: center;
+      }
+
+      #skills ul {
+        list-style: none;
+        display: inline-flex;
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-bottom: 40px;
+      }
+      #skills ul > li {
+        margin-right: 1.8rem;
+      }
+
+      /*interests*/
+      #interests {
+        justify-content: center;
+      }
+      /*awards*/
+      #awards {
+        justify-content: center;
+      }
+      #awards ul {
+        margin-left: 0px;
+        padding-left: 0px;
+      }
+      #awards ul > li {
+        list-style-type: none;
+        margin-bottom: 10px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+      .date {
+        color: #bd5d38;
+        width: 15rem;
+      }
+      h2 {
+        color: #343a40;
+        font-size: 2.5rem;
+      }
+      h3 {
+        font-size: 2rem;
+        color: #343a40;
+        margin-bottom: 0;
+      }
+      .subhead {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.5rem;
+      }
+    </style>
   </head>
   <body>
-    <nav></nav>
+    <nav>
+      <img
+        src="https://startbootstrap.github.io/startbootstrap-resume/assets/img/profile.jpg"
+        alt="profile"
+      />
+      <ul
+        style="
+          flex-direction: column;
+          padding-left: 0;
+          list-style: none;
+          margin-top: 25px;
+        "
+      >
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#education">EDUCATION</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#interests">INTERESTS</a></li>
+        <li style="margin-bottom: 0px"><a href="#awards">AWARDS</a></li>
+      </ul>
+    </nav>
+
+    <section class="resume-section" id="about" style="width: 70rem">
+      <h1 style="color: black">
+        CLARENCE <span style="color: #bd5d38">TAYLOR</span>
+      </h1>
+
+      <div
+        style="
+          margin-bottom: 3rem !important  ;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 1.4rem;
+        "
+      >
+        3542 BERRY STREET · CHEYENNE WELLS, CO 80810 · (317) 585-8468 ·
+        <a style="color: #bd5d38" href="">NAME@EMAIL.COM</a>
+      </div>
+      <p>
+        I am experienced in leveraging agile frameworks to provide a robust
+        synopsis for high level overviews. Iterative approaches to corporate
+        strategy foster collaborative thinking to further the overall value
+        proposition.
+      </p>
+      <div>
+        <a class="social-icon" href="">
+          <i
+            class="fa-brands fa-linkedin"
+            style="color: #fff; font-size: 30px"
+          ></i
+        ></a>
+        <a class="social-icon" href=""
+          ><i
+            class="fa-brands fa-github"
+            style="color: #fff; font-size: 30px"
+          ></i
+        ></a>
+        <a class="social-icon" href=""
+          ><i
+            class="fa-brands fa-twitter"
+            style="color: #fff; font-size: 30px"
+          ></i
+        ></a>
+        <a class="social-icon" href=""
+          ><i
+            class="fa-brands fa-facebook-f"
+            style="color: #fff; font-size: 30px"
+          ></i
+        ></a>
+      </div>
+    </section>
+    <hr />
+    <section class="resume-section" id="experience">
+      <h2>EXPERIENCE</h2>
+      <div class="row">
+        <div style="width: 70rem">
+          <h3>SENIOR WEB DEVELOPER</h3>
+          <div class="subhead">INTELITEC SOLUTIONS</div>
+          <p>
+            Bring to the table win-win survival strategies to ensure proactive
+            domination. At the end of the day, going forward, a new normal that
+            has evolved from generation X is on the runway heading towards a
+            streamlined cloud solution. User generated content in real-time will
+            have multiple touchpoints for offshoring.
+          </p>
+        </div>
+        <div class="date">March 2013 - Present</div>
+      </div>
+      <div class="row">
+        <div style="width: 70rem">
+          <h3>WEB DEVELOPER</h3>
+          <div class="subhead">INTELITEC SOLUTIONS</div>
+          <p>
+            Capitalize on low hanging fruit to identify a ballpark value added
+            activity to beta test. Override the digital divide with additional
+            clickthroughs from DevOps. Nanotechnology immersion along the
+            information highway will close the loop on focusing solely on the
+            bottom line.
+          </p>
+        </div>
+        <div class="date">December 2011 - March 2013</div>
+      </div>
+      <div class="row">
+        <div style="width: 70rem">
+          <h3>JUNIOR WEB DESIGNER</h3>
+          <div class="subhead">SHOUT! MEDIA PRODUCTIONS</div>
+          <p>
+            Podcasting operational change management inside of workflows to
+            establish a framework. Taking seamless key performance indicators
+            offline to maximise the long tail. Keeping your eye on the ball
+            while performing a deep dive on the start-up mentality to derive
+            convergence on cross-platform integration.
+          </p>
+        </div>
+
+        <div class="date">July 2010 - December 2011</div>
+      </div>
+      <div class="row">
+        <div style="width: 70rem">
+          <h3>WEB DESIGN INTERN</h3>
+          <div class="subhead">SHOUT! MEDIA PRODUCTIONS</div>
+          <p>
+            Collaboratively administrate empowered markets via plug-and-play
+            networks. Dynamically procrastinate B2C users after installed base
+            benefits. Dramatically visualize customer directed convergence
+            without revolutionary ROI.
+          </p>
+        </div>
+        <div class="date">September 2008 - June 2010</div>
+      </div>
+    </section>
+    <hr />
+    <section class="resume-section" id="education">
+      <h2>EDUCATION</h2>
+      <div class="row">
+        <div style="width: 70rem">
+          <h3>UNIVERSITY OF COLORADO BOULDER</h3>
+          <div class="subhead">BACHELOR OF SCIENCE</div>
+          <p>
+            Computer Science - Web Development Track <br /><br />
+            GPA: 3.23
+          </p>
+        </div>
+        <div class="date">August 2006 - May 2010</div>
+      </div>
+      <div class="row">
+        <div style="width: 70rem">
+          <h3>JAMES BUCHANAN HIGH SCHOOL</h3>
+          <div class="subhead">TECHNOLOGY MAGNET PROGRAM</div>
+          <p>GPA: 3.56</p>
+        </div>
+        <div class="date">August 2002 - May 2006</div>
+      </div>
+    </section>
+    <hr />
+    <section class="resume-section" id="skills">
+      <h2>SKILLS</h2>
+      <div class="subhead" style="margin-bottom: 20px">
+        PROGRAMMING LANGUAGES & TOOLS
+      </div>
+      <ul>
+        <li>
+          <i class="fa-brands fa-html5" style="font-size: 50px"></i>
+        </li>
+        <li><i class="fa-brands fa-css3-alt" style="font-size: 50px"></i></li>
+        <li><i class="fa-brands fa-square-js" style="font-size: 50px"></i></li>
+        <li><i class="fa-brands fa-angular" style="font-size: 50px"></i></li>
+        <li><i class="fa-brands fa-react" style="font-size: 50px"></i></li>
+        <li><i class="fa-brands fa-node-js" style="font-size: 50px"></i></li>
+        <li><i class="fa-brands fa-sass" style="font-size: 50px"></i></li>
+        <li><i class="fa-brands fa-less" style="font-size: 50px"></i></li>
+        <li><i class="fa-brands fa-wordpress" style="font-size: 50px"></i></li>
+        <li><i class="fa-brands fa-gulp" style="font-size: 50px"></i></li>
+        <li><i class="fa-brands fa-grunt" style="font-size: 50px"></i></li>
+        <li><i class="fa-brands fa-npm" style="font-size: 50px"></i></li>
+      </ul>
+      <div class="subhead">WORKFLOW</div>
+      <ul
+        style="
+          display: block;
+          margin-bottom: 15px;
+          font-size: 1rem;
+          font-weight: 400;
+        "
+      >
+        <li style="margin-bottom: 7px; font-size: 1.2rem; font-weight: 400">
+          <i class="fa fa-check"></i>Mobile-First, Responsive Design
+        </li>
+        <li style="margin-bottom: 7px; font-size: 1.2rem; font-weight: 400">
+          <i class="fa fa-check"></i>Cross Browser Testing & Debugging
+        </li>
+        <li style="margin-bottom: 7px; font-size: 1.2rem; font-weight: 400">
+          <i class="fa fa-check"></i>Cross Functional Teams
+        </li>
+        <li style="margin-bottom: 7px; font-size: 1.2rem; font-weight: 400">
+          <i class="fa fa-check"></i>Agile Development & Scrum
+        </li>
+      </ul>
+    </section>
+    <hr />
+    <section class="resume-section" id="interests">
+      <h1>INTERESTS</h1>
+      <p>
+        Apart from being a web developer, I enjoy most of my time being
+        outdoors. In the winter, I am an avid skier and novice ice climber.
+        During the warmer months here in Colorado, I enjoy mountain biking, free
+        climbing, and kayaking. <br /><br />
+
+        When forced indoors, I follow a number of sci-fi and fantasy genre
+        movies and television shows, I am an aspiring chef, and I spend a large
+        amount of my free time exploring the latest technology advancements in
+        the front-end web development world.
+      </p>
+    </section>
+    <hr />
+    <section class="resume-section" id="awards">
+      <h2>AWARDS&CERTIFICATIONS</h2>
+      <ul>
+        <li>
+          <i
+            class="fa fa-trophy"
+            style="
+              color: gold;
+              margin-left: 5px;
+              margin-right: 5px;
+              font-size: 15px;
+            "
+          ></i
+          >Google Analytics Certified Developer
+        </li>
+        <li>
+          <i
+            class="fa fa-trophy"
+            style="
+              color: gold;
+              margin-left: 5px;
+              margin-right: 5px;
+              font-size: 15px;
+            "
+          ></i
+          >Mobile Web Specialist - Google Certification
+        </li>
+        <li>
+          <i
+            class="fa fa-trophy"
+            style="
+              color: gold;
+              margin-left: 5px;
+              margin-right: 5px;
+              font-size: 15px;
+            "
+          ></i>
+          1 st Place - University of Colorado Boulder - Emerging Tech
+          Competition 2009
+        </li>
+        <li>
+          <i
+            class="fa fa-trophy"
+            style="
+              color: gold;
+              margin-left: 5px;
+              margin-right: 5px;
+              font-size: 15px;
+            "
+          ></i>
+          1<sup>st</sup> Place - University of Colorado Boulder - Adobe Creative
+          Jam 2008 (UI Design Category)
+        </li>
+        <li>
+          <i
+            class="fa fa-trophy"
+            style="
+              color: gold;
+              margin-left: 5px;
+              margin-right: 5px;
+              font-size: 15px;
+            "
+          ></i>
+          2<sup>nd</sup> Place - University of Colorado Boulder - Emerging Tech
+          Competition 2008
+        </li>
+        <li>
+          <i
+            class="fa fa-trophy"
+            style="
+              color: gold;
+              margin-left: 5px;
+              margin-right: 5px;
+              font-size: 15px;
+            "
+          ></i>
+          1<sup>st</sup> Place - James Buchanan High School - Hackathon 2006
+        </li>
+        <li>
+          <i
+            class="fa fa-trophy"
+            style="
+              color: gold;
+              margin-left: 5px;
+              margin-right: 5px;
+              font-size: 15px;
+            "
+          ></i>
+          3<sup>rd</sup>Place - James Buchanan High School - Hackathon 2005
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
