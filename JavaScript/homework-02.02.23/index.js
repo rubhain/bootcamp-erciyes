@@ -64,3 +64,57 @@ const formattedPhone = customerData.map((customer) =>
   customer.address.phone.replace(/\D+/g, "")
 );
 console.log(formattedPhone);
+
+// ---------- EXTRA ----------
+
+//Aşağıdaki linkten aldığınız dataya göre:
+
+const orderData = await fetch("https://northwind.vercel.app/api/orders").then(
+  (response) => response.json()
+);
+
+//1) 1996 yılında kaç adet sipariş geçilmiştir?
+
+const yearOrder = orderData.filter((order) => {
+  return order.orderDate.includes("1996");
+});
+
+console.log(yearOrder.length, "adet siparis gecilmistir.");
+
+//2) Bir seferde en yüksek satışın nedir?
+//Math.max(...data.map((o) => o.quantity))
+
+const maxSale = Math.max(
+  ...orderData
+    .map((order) => {
+      const data = order.details;
+      return Math.max(...data.map((o) => o.quantity));
+    })
+    .map((sum) => sum)
+);
+
+console.log(maxSale);
+//3) USA de toplam satış cirom nedir?
+//(unitPrice*quantity*(1-discount))
+
+const turnoverCalc = (item) => {
+  const sum = item.unitPrice * item.quantity * (1 - item.discount);
+  return sum;
+};
+
+const getSum = (total, num) => {
+  return total + num;
+};
+
+const regionalTurnover = orderData
+  .filter((order) => order.shipAddress.country == "USA")
+  .map((order) =>
+    order.details
+      .map((o) => {
+        return turnoverCalc(o);
+      })
+      .reduce(getSum, 0)
+  )
+  .reduce(getSum, 0);
+
+console.log(regionalTurnover);
