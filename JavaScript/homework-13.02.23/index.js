@@ -51,21 +51,7 @@ const deleteSupplierById = () => {
 
 //Token ile APIden veri çekilmesi
 //4)Axios
-axios
-  .get(
-    "https://api.collectapi.com/weather/getWeather?data.lang=tr&data.city=kayseri",
-    {
-      headers: {
-        authorization: "apikey 7IAmnwEpX7NXiZlDLS0Ef6:3PvCYiRgxVtWqxuOmB7pMv",
-      },
-    }
-  )
-  .then((res) => {
-    console.log("Axios Success!", res.data);
-  })
-  .catch((err) => {
-    console.log("error ", err);
-  });
+
 //5)Fetch
 fetch(
   "https://api.collectapi.com/weather/getWeather?data.lang=tr&data.city=kayseri",
@@ -83,3 +69,41 @@ fetch(
   .catch((err) => {
     console.log("error ", err);
   });
+
+//Axios Interceptors
+// Add a request interceptor
+axios.interceptors.request.use(
+  (config) => {
+    config.headers["Authorization"] =
+      "apikey 7IAmnwEpX7NXiZlDLS0Ef6:3PvCYiRgxVtWqxuOmB7pMv";
+    // Do something before request is sent
+    return config;
+  },
+  (error) => {
+    // Do something with request error
+    return Promise.reject(error);
+  }
+);
+
+// Add a response interceptor
+axios.interceptors.response.use(
+  (response) => {
+    // Any status code that lie within the range of 2xx cause this function to trigger
+    // Do something with response data
+    console.log("Axios Success!", response.data);
+    return response;
+  },
+  (error) => {
+    // Any status codes that falls outside the range of 2xx cause this function to trigger
+    // Do something with response error
+    return Promise.reject(error);
+  }
+);
+
+axios.get(
+  "https://api.collectapi.com/weather/getWeather?data.lang=tr&data.city=Kayseri"
+);
+
+axios.get(
+  "https://api.collectapi.com/health/dutyPharmacy?ilce=kocasinan&il=kayseri"
+);
