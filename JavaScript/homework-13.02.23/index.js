@@ -51,7 +51,6 @@ const deleteSupplierById = () => {
 
 //Token ile APIden veri çekilmesi
 //4)Axios
-
 //5)Fetch
 fetch(
   "https://api.collectapi.com/weather/getWeather?data.lang=tr&data.city=kayseri",
@@ -76,6 +75,7 @@ axios.interceptors.request.use(
   (config) => {
     config.headers["Authorization"] =
       "apikey 7IAmnwEpX7NXiZlDLS0Ef6:3PvCYiRgxVtWqxuOmB7pMv";
+    console.log("Axios Request!");
     // Do something before request is sent
     return config;
   },
@@ -90,7 +90,7 @@ axios.interceptors.response.use(
   (response) => {
     // Any status code that lie within the range of 2xx cause this function to trigger
     // Do something with response data
-    console.log("Axios Success!", response.data);
+    console.log("Axios Interceptors Response Success!", response.data);
     return response;
   },
   (error) => {
@@ -100,10 +100,12 @@ axios.interceptors.response.use(
   }
 );
 
-axios.get(
-  "https://api.collectapi.com/weather/getWeather?data.lang=tr&data.city=Kayseri"
-);
+const apiCallBtn = () => {
+  axios.get(
+    "https://api.collectapi.com/weather/getWeather?data.lang=tr&data.city=Kayseri"
+  );
 
-axios.get(
-  "https://api.collectapi.com/health/dutyPharmacy?ilce=kocasinan&il=kayseri"
-);
+  axios.get(
+    "https://api.collectapi.com/health/dutyPharmacy?ilce=kocasinan&il=kayseri"
+  );
+};
