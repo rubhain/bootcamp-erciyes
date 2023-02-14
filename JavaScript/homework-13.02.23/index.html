@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div><input type="text" placeholder="Company Name" id="companyName" /></div>
+    <div><input type="text" placeholder="Contact Name" id="contactName" /></div>
+    <div>
+      <input type="text" placeholder="Contact Title" id="contactTitle" />
+    </div>
+    <div><input type="text" placeholder="City" id="address" /></div>
+    <div><button onclick="addBtn(), domList();">Add</button></div>
+    <hr />
+    <button onclick="domList()">Refresh</button>
+    <ul id="suppliers"></ul>
+    <hr />
+    <div><input type="number" id="supplierId" placeholder="Supplier ID" /></div>
+    <button onclick="deleteSupplierById()">Delete</button>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
