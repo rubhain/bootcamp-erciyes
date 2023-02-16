@@ -1,0 +1,35 @@
+{"projects": [
+    {
+        "type": "Summer House", 
+        "img": "https://www.w3schools.com/w3images/house5.jpg"
+    },
+    {
+        "type": "Brick House", 
+        "img": "https://www.w3schools.com/w3images/house2.jpg"
+    },
+    {
+        "type": "Renovated", 
+        "img": "https://www.w3schools.com/w3images/house3.jpg"
+    },
+    {
+        "type": "Barn House", 
+        "img": "https://www.w3schools.com/w3images/house4.jpg"
+    },
+    {
+        "type": "Summer House", 
+        "img": "https://www.w3schools.com/w3images/house2.jpg"
+    },
+    {
+        "type": "Brick House", 
+        "img": "https://www.w3schools.com/w3images/house5.jpg"
+    },
+    {
+        "type": "Renovated", 
+        "img": "https://www.w3schools.com/w3images/house4.jpg"
+    },
+    {
+        "type": "Barn House", 
+        "img": "https://www.w3schools.com/w3images/house3.jpg"
+    }
+    ]
+}
