@@ -71,7 +71,8 @@ fetch(
 
 //Axios Interceptors
 // Add a request interceptor
-axios.interceptors.request.use(
+
+const myInterceptor = axios.interceptors.request.use(
   (config) => {
     config.headers["Authorization"] =
       "apikey 7IAmnwEpX7NXiZlDLS0Ef6:3PvCYiRgxVtWqxuOmB7pMv";
@@ -81,6 +82,7 @@ axios.interceptors.request.use(
   },
   (error) => {
     // Do something with request error
+    console.log("Request error");
     return Promise.reject(error);
   }
 );
@@ -96,9 +98,12 @@ axios.interceptors.response.use(
   (error) => {
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error
+    console.log("Response error");
     return Promise.reject(error);
   }
 );
+
+const dltKey = () => axios.interceptors.request.eject(myInterceptor); //If you need to remove an interceptor later you can.
 
 const apiCallBtn = () => {
   axios.get(
@@ -109,3 +114,6 @@ const apiCallBtn = () => {
     "https://api.collectapi.com/health/dutyPharmacy?ilce=kocasinan&il=kayseri"
   );
 };
+
+//const instance = axios.create();
+//instance.interceptors.request.use(function () {/*...*/});
