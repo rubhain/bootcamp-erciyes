@@ -57,7 +57,7 @@ fetch(
   {
     method: "GET",
     headers: {
-      Authorization: "apikey 7IAmnwEpX7NXiZlDLS0Ef6:3PvCYiRgxVtWqxuOmB7pMv",
+      Authorization: "",
     },
   }
 )
@@ -76,8 +76,7 @@ const instance = axios.create();
 
 const myInterceptor = instance.interceptors.request.use(
   (config) => {
-    config.headers["Authorization"] =
-      "apikey 7IAmnwEpX7NXiZlDLS0Ef6:3PvCYiRgxVtWqxuOmB7pMv";
+    config.headers["Authorization"] = "";
     console.log("Axios Request!");
     // Do something before request is sent
     return config;
