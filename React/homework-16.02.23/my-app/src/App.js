@@ -6,7 +6,7 @@ import PageContent from "./components/PageContent/PageContent";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar />
       <Header />
       <PageContent />
