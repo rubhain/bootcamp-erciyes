@@ -72,7 +72,9 @@ fetch(
 //Axios Interceptors
 // Add a request interceptor
 
-const myInterceptor = axios.interceptors.request.use(
+const instance = axios.create();
+
+const myInterceptor = instance.interceptors.request.use(
   (config) => {
     config.headers["Authorization"] =
       "apikey 7IAmnwEpX7NXiZlDLS0Ef6:3PvCYiRgxVtWqxuOmB7pMv";
@@ -88,7 +90,7 @@ const myInterceptor = axios.interceptors.request.use(
 );
 
 // Add a response interceptor
-axios.interceptors.response.use(
+instance.interceptors.response.use(
   (response) => {
     // Any status code that lie within the range of 2xx cause this function to trigger
     // Do something with response data
@@ -103,10 +105,10 @@ axios.interceptors.response.use(
   }
 );
 
-const dltKey = () => axios.interceptors.request.eject(myInterceptor); //If you need to remove an interceptor later you can.
+const dltKey = () => instance.interceptors.request.eject(myInterceptor); //If you need to remove an interceptor later you can.
 
 const apiCallBtn = () => {
-  axios.get(
+  instance.get(
     "https://api.collectapi.com/weather/getWeather?data.lang=tr&data.city=Kayseri"
   );
 
