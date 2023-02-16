@@ -23,12 +23,6 @@
             "title": "Architect",
             "Description": "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.",
             "img":"https://www.w3schools.com/w3images/team4.jpg"
-        },
-        {
-            "name": "John Doe",
-            "title": "CEO & Founder",
-            "Description": "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.",
-            "img":"https://www.w3schools.com/w3images/team2.jpg"
         }
     ]
 }
