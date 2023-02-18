@@ -22,9 +22,9 @@ function About() {
       </p>
     </div>
     <div className="w3-row-padding w3-grayscale">
-    {persons.map((item) => {
+    {persons.map((item,key) => {
       return (
-        <div className="w3-col l3 m6 w3-margin-bottom">
+        <div className="w3-col l3 m6 w3-margin-bottom" key={key}>
           <img src={item.img} alt="John" style={{ width: "100%" }} />
             <h3>{item.name}</h3>
             <p className="w3-opacity">{item.title}</p>
