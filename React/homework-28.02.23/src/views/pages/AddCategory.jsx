@@ -1,8 +1,7 @@
 import { useForm, Controller} from "react-hook-form";
-import { useEffect, useState } from "react";
 import {TextField } from "@mui/material";
 import axios from "axios";
-import Grid from "@mui/material";
+
 
 const AddCategory = () => {    
   const { control, handleSubmit } = useForm({
@@ -15,7 +14,7 @@ const AddCategory = () => {
   const onSubmit = (data) => {
 
     const newCategory = {
-        id: data.id,
+        id: Number(data.id),
         description: data.description,
         name: data.name,
     }
