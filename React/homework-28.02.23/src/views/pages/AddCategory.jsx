@@ -23,8 +23,9 @@ const AddCategory = () => {
   };
 
   return (<>
+  <h1>Add Category</h1>
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
+      <div style={{marginTop: 10}}>
       <Controller
         name="id"
         control={control}
@@ -36,20 +37,20 @@ const AddCategory = () => {
         }}
         {...field} />}
       />
-      </div><div>
+      </div ><div style={{marginTop: 10}}>
       <Controller
         name="name"
         control={control}
-        render={({ field }) => <TextField label="Category Name"  rows={2}{...field} />}
+        render={({ field }) => <TextField label="Category Name" sx={{width: 350}}{...field} />}
       />
-      </div><div>
+      </div><div style={{marginTop: 10}}>
       <Controller
         name="description"
         control={control}
-        render={({ field }) => <TextField label="Description"rows={8}{...field} />}
+        render={({ field }) => <TextField label="Description" sx={{width: 350}}{...field} />}
       />
       </div>
-      <input type="submit" />
+      <input type="submit" style={{marginTop: 10}} />
     </form>
     </>
   );
