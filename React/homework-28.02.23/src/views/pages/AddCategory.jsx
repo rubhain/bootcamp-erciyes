@@ -4,6 +4,7 @@ import axios from "axios";
 
 
 const AddCategory = () => {    
+
   const { control, handleSubmit } = useForm({
     defaultValues:{
       id: null,
@@ -12,7 +13,6 @@ const AddCategory = () => {
     }});
   
   const onSubmit = (data) => {
-
     const newCategory = {
         id: Number(data.id),
         description: data.description,
