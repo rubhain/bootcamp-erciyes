@@ -9,18 +9,20 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 function Products() {
     const [products, setProducts] = useState([]);
     const [loading, setloading] = useState(true);
     const [open, setOpen] = useState(false);
     const [productKey, setProductKey] = useState();
+    let navigate = useNavigate();
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
 
 
-    const handleClickOpen = (item) => {
+    const handleClickOpen = (item,e) => {
         setOpen(true);
         setProductKey(item.id);
       };
@@ -75,13 +77,17 @@ function Products() {
             headerName: 'UnitsInStock',
             field: 'unitsInStock',
             flex: 1
+        },        {
+            headerName: 'QuantityPerUnit',
+            field: 'quantityPerUnit',
+            flex: 1
         },
         {
             headerName: 'Delete',
             renderCell: (item) =>{
                 return (
                 <Button color='error' variant='contained' onClick={() => handleClickOpen(item)} >Delete</Button>)
-            }
+            },
         }
     ]
 
