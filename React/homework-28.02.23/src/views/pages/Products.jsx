@@ -22,7 +22,7 @@ function Products() {
 
 
 
-    const handleClickOpen = (item,e) => {
+    const handleClickOpen = (item) => {
         setOpen(true);
         setProductKey(item.id);
       };
@@ -81,14 +81,17 @@ function Products() {
             headerName: 'QuantityPerUnit',
             field: 'quantityPerUnit',
             flex: 1
-        },
-        {
-            headerName: 'Delete',
+        },{
+            headerName: 'Buttons',
             renderCell: (item) =>{
-                return (
-                <Button color='error' variant='contained' onClick={() => handleClickOpen(item)} >Delete</Button>)
+                return (<>
+                <Button color='primary' variant='contained' onClick={() => navigate("/products/" + item.id) }>Go to Detail</Button>    
+                <Button color='error' variant='contained' onClick={() => handleClickOpen(item)} >Delete</Button>
+                </>)
             },
-        }
+            flex: 1
+        },
+
     ]
 
 
